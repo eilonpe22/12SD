@@ -8,7 +8,7 @@ public class SuicideEnemy : MonoBehaviour
     [SerializeField] private GameObject player;
     [SerializeField] private float speed;
     [SerializeField] private float speedAtShoting;
-    [SerializeField] private float laserDMG;
+    [SerializeField] private int enemyDMG;
     [SerializeField] private float minDist;
     public Transform atackPoint;
     public GameObject laser;
@@ -18,6 +18,8 @@ public class SuicideEnemy : MonoBehaviour
     public GameObject[] AI;
     public GameManager gameManager;
     public GameObject Explosion1;
+    private float timer;
+    [SerializeField] private float fireRate;
     Rigidbody rb;
     
     void Start()
@@ -33,11 +35,12 @@ public class SuicideEnemy : MonoBehaviour
         if (other.tag == "Player")
         {
             //need to change the " set active " to health system.
-            playerController.PlayerHP = playerController.PlayerHP - 20;
+            playerController.PlayerHP = playerController.PlayerHP -= enemyDMG;
             //make the enemy disapear .
             GameObject GO = Instantiate(Explosion1, transform.position, Quaternion.identity);
             Destroy(gameObject);
-            Destroy(GO, 5);
+            Destroy(GO, 3);
+            Debug.Log("hit");
 
         }
         if (other.tag == "Laser")
@@ -51,13 +54,13 @@ public class SuicideEnemy : MonoBehaviour
           
             Destroy(other.gameObject);
             Destroy(gameObject);
-            Destroy(GO,5);
+            Destroy(GO,3);
 
         }
         if (other.tag == "Ground")
         {
             GameObject GO = Instantiate(Explosion1, transform.position, Quaternion.identity);
-            Destroy(this.gameObject);
+           // Destroy(this.gameObject);
             
         }
     }
@@ -66,6 +69,7 @@ public class SuicideEnemy : MonoBehaviour
     void Update()
     {
         EmemySepration();
+        PlayerDistance();
     }
     private void FixedUpdate()
     {
@@ -97,12 +101,27 @@ public class SuicideEnemy : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, playerLoaction.transform.position, speed * Time.deltaTime);
         //make the object face the player .
         transform.LookAt(playerLoaction);
+       
+        
+    }
+    void PlayerDistance()
+    {
+        
         float dist = Vector3.Distance(playerLoaction.transform.position, transform.position);
         if (dist < minDist)
         {
-            Instantiate(laser, atackPoint.position, transform.rotation);
-            transform.position = Vector3.MoveTowards(transform.position, playerLoaction.transform.position, speed * Time.deltaTime);
+            timer += Time.deltaTime;
+            transform.position = Vector3.MoveTowards(transform.position, playerLoaction.transform.position, speedAtShoting * Time.deltaTime);
+            if (timer > fireRate)
+            {
+                //reset timer
+                timer = 0;
+                Instantiate(laser, atackPoint.position, transform.rotation);
+
+            }
+            //Debug.Log("DISTANCE");
+           
+            
         }
-        
     }
 }

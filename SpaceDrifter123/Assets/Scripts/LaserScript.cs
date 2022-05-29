@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 public class LaserScript : MonoBehaviour
 {
     public float fireSpeed = 10f;
-    public float destroyLaser;
+    public float destroyLaserTime;
     public int deadEnemysGoal;
     private int counter;
     public GameManager gameManager;
@@ -27,7 +27,7 @@ public class LaserScript : MonoBehaviour
     }
     void LaserDMG()
     {
-        Destroy(gameObject, destroyLaser);
+        Destroy(gameObject, destroyLaserTime);
     }
 
 

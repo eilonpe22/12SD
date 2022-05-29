@@ -114,11 +114,6 @@ public class PlayerController : MonoBehaviour
             //RB.AddRelativeTorque(Vector3.right * Mathf.Clamp(pitchYaw.y, -1f, 1f) * pitchTorque * Time.deltaTime, ForceMode.Force);
         }
 
-        //RB.AddRelativeTorque(Vector3.up * Mathf.Clamp(pitchYaw.x, -1f, 1f) * yawTorque * Time.deltaTime, ForceMode.Force);
-        // playerBody.Rotate(new Vector3(0, pitchYaw.x, pitchYaw.y * AimSensitivity) * Time.deltaTime);
-        //playerBody.Rotate(new Vector3(yawTorque * AimSensitivity, 0,0)*Time.deltaTime);
-        //RB.AddRelativeTorque(Vector3.up * Mathf.Clamp(pitchYaw.x, -1f, 1f) * yawTorque * Time.deltaTime, ForceMode.Acceleration);
-
         if (pitchYaw.x > 0.1f || pitchYaw.x < -0.1f)
         {
             //pitchYaw.x=(-1,1)
@@ -153,15 +148,7 @@ public class PlayerController : MonoBehaviour
             RB.AddRelativeForce(Vector3.right * horizontalGlide * Time.deltaTime);
             horizontalGlide *= leftRightGlideReduction;
         }
-        if (Boost > 0.1f || Boost < -0.1f)
-        {
-            RB.AddRelativeForce(Vector3.forward * boostSpeed * Time.deltaTime, ForceMode.Impulse);
-            boosted = true;
-        }
-        else
-        {
-            boosted = false;
-        }
+        
 
 
         if (upDown1D > 0.1f || upDown1D < -0.1f)
@@ -220,6 +207,15 @@ public class PlayerController : MonoBehaviour
     //public ParticleSystem BoostEffectL;
     public void Boosted()
     {
+        if (Boost > 0.1f || Boost < -0.1f)
+        {
+            RB.AddRelativeForce(Vector3.forward * boostSpeed * Time.deltaTime, ForceMode.Impulse);
+            boosted = true;
+        }
+        else
+        {
+            boosted = false;
+        }
         if (boosted)
         {
             thrusterR.startSpeed = 25f;

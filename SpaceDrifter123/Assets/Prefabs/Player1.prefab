@@ -4873,8 +4873,8 @@ Transform:
   m_GameObject: {fileID: 539181630118058737}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
   m_LocalPosition: {x: -0.2, y: 0.32000732, z: -1.6499939}
-  m_LocalScale: {x: 0.01, y: 0.26, z: 0.54}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.03, y: 0.78, z: 1.5}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 539181629887569430}
   m_RootOrder: 1
@@ -9686,8 +9686,8 @@ Transform:
   m_GameObject: {fileID: 539181630138076191}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
   m_LocalPosition: {x: 0.2, y: 0.32000732, z: -1.6499939}
-  m_LocalScale: {x: 0.01, y: 0.26, z: 0.54}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.03, y: 0.78, z: 1.5}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 539181629887569430}
   m_RootOrder: 0
@@ -14497,7 +14497,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 589413030244231513}
   m_LocalRotation: {x: -0.03864891, y: 0.012546205, z: -0.3085042, w: 0.9503547}
-  m_LocalPosition: {x: 2, y: -1.808, z: 0}
+  m_LocalPosition: {x: 2, y: -1.808, z: 4.683}
   m_LocalScale: {x: 1.556531, y: 1.556531, z: 1.556531}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -14617,7 +14617,7 @@ SphereCollider:
   m_GameObject: {fileID: 1426369723428789501}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
@@ -14896,7 +14896,7 @@ SphereCollider:
   m_GameObject: {fileID: 1638025686663576799}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
@@ -15008,7 +15008,7 @@ SphereCollider:
   m_GameObject: {fileID: 1650578025212425990}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
@@ -20230,7 +20230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1219f00f2db499e4faa5fa6b93e7bb4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boostSpeed: 200
+  boostSpeed: 700
   PlayerHP: 100
   sideTilt: 10.2
   AimSensitivity: 2
@@ -20241,7 +20241,7 @@ MonoBehaviour:
   boosted: 0
   playerBody: {fileID: 1772943010673396267}
   rollTorque: 32.4
-  thrust: 200
+  thrust: 400
   strafeThrust: 150
   updownSpeed: 150
   thrustGlideReduction: 0.999
@@ -20635,7 +20635,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2412921981031527692}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.425, y: 0, z: 1.7}
+  m_LocalPosition: {x: -0.42499924, y: 0, z: 2.9780273}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -20765,7 +20765,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2499478016664571923}
-  m_LocalRotation: {x: 0.08248875, y: 0.00000003512694, z: -0.0000000029074863, w: 0.996592}
+  m_LocalRotation: {x: 0.08248875, y: 0.000000070269245, z: -0.0000000058162444, w: 0.996592}
   m_LocalPosition: {x: 0, y: 1.480011, z: -2.6999512}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -20803,7 +20803,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7770962, y: 1}
+    m_SensorSize: {x: 1.7784091, y: 1}
   m_Transitions:
     m_BlendHint: 3
     m_InheritPosition: 0
@@ -20837,7 +20837,7 @@ Camera:
     height: 1
   near clip plane: 0.01
   far clip plane: 3000
-  field of view: 116.95741
+  field of view: 135.35114
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -20878,7 +20878,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -21100,7 +21100,7 @@ SphereCollider:
   m_GameObject: {fileID: 3083781473067513630}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
@@ -21212,7 +21212,7 @@ SphereCollider:
   m_GameObject: {fileID: 3298845953043370078}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
@@ -21255,7 +21255,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4243943539064789723}
   m_LocalRotation: {x: -0.11818584, y: -0, z: -0, w: 0.9929915}
-  m_LocalPosition: {x: -2.02, y: -0.56, z: 0}
+  m_LocalPosition: {x: -2.02, y: -0.56, z: 4.6831055}
   m_LocalScale: {x: 1.556531, y: 1.556531, z: 1.556531}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -21305,7 +21305,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4270774900821253209}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.425, y: 0, z: 1.7}
+  m_LocalPosition: {x: 0.42499924, y: 0, z: 2.978}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -21439,7 +21439,7 @@ SphereCollider:
   m_GameObject: {fileID: 4797109081384683266}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
@@ -21725,7 +21725,7 @@ SphereCollider:
   m_GameObject: {fileID: 7443197148166308480}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
@@ -21837,7 +21837,7 @@ SphereCollider:
   m_GameObject: {fileID: 7971659607766858004}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
@@ -21949,7 +21949,7 @@ SphereCollider:
   m_GameObject: {fileID: 8146882580200031715}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
@@ -22061,7 +22061,7 @@ SphereCollider:
   m_GameObject: {fileID: 8327899043542822459}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}

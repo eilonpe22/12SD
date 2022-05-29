@@ -61,22 +61,25 @@ public class ShootScript : MonoBehaviour
     }
     void NormalShot()
     {
-        if(MGactive == true)
-        {
-            MachineGunBehavior();
-        }
+       
         if  (shooting && allowButtonHold)
         {
             //starting timer
             timer += Time.deltaTime;
             if (timer > timeBetweenShots)
             {
+                
                 //reset timer
                 timer = 0;
                 Instantiate(laser, atackPoint.position, transform.rotation);
                 Instantiate(laser2, atackPoint2.position, transform.rotation);
+                Debug.Log("lll");
             }
 
+        }
+        if (MGactive == true)
+        {
+            MachineGunBehavior();
         }
     }
     void OverHeat()

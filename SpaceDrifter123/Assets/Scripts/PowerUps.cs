@@ -22,6 +22,7 @@ public class PowerUps : MonoBehaviour
         {
           //  PlayerController player = other.transform.GetComponent<PlayerController>();
             ShootScript player = other.transform.GetComponent<ShootScript>();
+            PlayerController powerup = other.transform.GetComponent<PlayerController>();
             if (player != null)
             {
                 switch (powerupID)
@@ -29,7 +30,10 @@ public class PowerUps : MonoBehaviour
                     case 0:
                         player.MachineGunActive();
                         break;
-                   
+                    case 1:
+                        powerup.Boosted();
+                        break;
+
 
                 }
 

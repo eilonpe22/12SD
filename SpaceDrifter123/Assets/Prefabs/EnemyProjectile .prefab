@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 87d54fccb2906c24c8e432111d098bee, type: 2}
+  - {fileID: 2100000, guid: bf023846a59262f429e5847468cd96f6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -286,11 +286,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7126228849832750831}
+  - component: {fileID: 6536452669961151893}
   - component: {fileID: 7607198367260444309}
-  - component: {fileID: 3767729341163428598}
+  - component: {fileID: -2857659410480219481}
   m_Layer: 0
-  m_Name: MachineGunProjectile 1
-  m_TagString: Laser
+  m_Name: 'EnemyProjectile '
+  m_TagString: EnemyLaser
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -304,7 +305,7 @@ Transform:
   m_GameObject: {fileID: 2067692043907002244}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 3.75}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1.5}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2568400668303594577}
@@ -313,6 +314,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &6536452669961151893
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067692043907002244}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.57328606
+  m_Height: 2.0584133
+  m_Direction: 2
+  m_Center: {x: 0.004395485, y: 0.010209143, z: -0.0037345889}
 --- !u!54 &7607198367260444309
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -324,12 +339,12 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 1
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &3767729341163428598
+--- !u!114 &-2857659410480219481
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -338,11 +353,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2067692043907002244}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 030f28b6327921748a427b8067239bc4, type: 3}
+  m_Script: {fileID: 11500000, guid: 3cff3b9f3c78ead48b5ff7ca00dd41fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireSpeed: 1000
-  destroyLaserTime: 2.8
+  fireSpeed: 300
+  destroyLaser: 3
   deadEnemysGoal: 0
   gameManager: {fileID: 0}
 --- !u!1 &2225765017967985769

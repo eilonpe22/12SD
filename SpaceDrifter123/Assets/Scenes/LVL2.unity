@@ -466,7 +466,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
-  m_LocalRotation: {x: 0.08248875, y: 0.00000003512694, z: -0.0000000029074863, w: 0.996592}
+  m_LocalRotation: {x: 0.08248875, y: 0.000000070269245, z: -0.0000000058162444, w: 0.996592}
   m_LocalPosition: {x: 54, y: 271.48, z: -2189.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1408,8 +1408,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 863868114}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1002, y: 500, z: 3803}
-  m_LocalScale: {x: 10000, y: 7000, z: 20000}
+  m_LocalPosition: {x: -1002, y: 1518, z: 3803}
+  m_LocalScale: {x: 13588.001, y: 53602.35, z: 20000}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 118057411}
@@ -6699,7 +6699,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1295647300
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6721,7 +6721,7 @@ MonoBehaviour:
   Ybond: 1000
   bondsMin: {x: -2100, y: 600, z: -2000}
   bondsMax: {x: 2500, y: 900, z: 2400}
-  TimeTOSpawn: 3
+  TimeTOSpawn: 5.76
   currentTime: 0
 --- !u!4 &1295647301
 Transform:
@@ -13135,6 +13135,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2876271171213205998, guid: ae583dce70682ba49bb7025d5e570731,
+        type: 3}
+      propertyPath: powerupID
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3680568396800295107, guid: ae583dce70682ba49bb7025d5e570731,
         type: 3}
       propertyPath: m_RootOrder
@@ -18845,7 +18850,7 @@ GameObject:
   - component: {fileID: 4701881427786005480}
   - component: {fileID: 6233515828610959745}
   m_Layer: 0
-  m_Name: Terrain_1 (3)
+  m_Name: Terrain_DarkMettar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
