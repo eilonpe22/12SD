@@ -7,7 +7,7 @@ public class EnemyLaser : MonoBehaviour
     public float fireSpeed = 10f;
     public float destroyLaser;
     public int deadEnemysGoal;
-    private int counter;
+    public int LaserDamege;
     public GameManager gameManager;
     // Start is called before the first frame update
     void Start()
@@ -34,7 +34,7 @@ public class EnemyLaser : MonoBehaviour
     {
         if (other.tag=="Player")
         {
-            other.GetComponent<PlayerController>().PlayerHP -= 5;
+            other.GetComponent<PlayerController>().PlayerHP -= LaserDamege;
         }
     }
 }

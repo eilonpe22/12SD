@@ -9,8 +9,12 @@ public class SuicideEnemy : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private float speedAtShoting;
     [SerializeField] private int enemyDMG;
+    [SerializeField] private int playerLaserDMG;
     [SerializeField] private float minDist;
+    public int enemyMaxHealth;
+    public int enemyHealth;
     public Transform atackPoint;
+    public Transform atackPoint2;
     public GameObject laser;
     public Transform playerLoaction;
     PlayerController playerController;
@@ -21,9 +25,11 @@ public class SuicideEnemy : MonoBehaviour
     private float timer;
     [SerializeField] private float fireRate;
     Rigidbody rb;
+
     
     void Start()
     {
+        enemyHealth = enemyMaxHealth;
         playerController = FindObjectOfType<PlayerController>();
         AI = GameObject.FindGameObjectsWithTag("Enemy");
         playerLoaction = playerController.playerBody;
@@ -45,16 +51,22 @@ public class SuicideEnemy : MonoBehaviour
         }
         if (other.tag == "Laser")
         {
+            enemyHealth = enemyHealth - playerLaserDMG;
+            if(enemyHealth <= 0)
+            {
+                gameManager.GetComponent<GameManager>().enemyCounter++;
+                GameObject GO = Instantiate(Explosion1, transform.position, Quaternion.identity);
 
-            gameManager.GetComponent<GameManager>().enemyCounter++;
+                Debug.Log("12");
+
+                Destroy(other.gameObject);
+                Destroy(gameObject);
+                Destroy(GO, 3);
+            }
+
+           
             
-           GameObject GO = Instantiate(Explosion1, transform.position, Quaternion.identity);
-
-            Debug.Log("12");
           
-            Destroy(other.gameObject);
-            Destroy(gameObject);
-            Destroy(GO,3);
 
         }
         if (other.tag == "Ground")
@@ -117,6 +129,7 @@ public class SuicideEnemy : MonoBehaviour
                 //reset timer
                 timer = 0;
                 Instantiate(laser, atackPoint.position, transform.rotation);
+                Instantiate(laser, atackPoint2.position, transform.rotation);
 
             }
             //Debug.Log("DISTANCE");
